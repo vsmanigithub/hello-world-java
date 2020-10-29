@@ -23,8 +23,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: setup env
         run: |
-          echo "::set-env name=RELEASE_TAG::latest"
-          echo "::set-env name=ENV_NAME::dev"
+          echo "latest" >> $RELEASE_TAG
+          echo "dev" >> $ENV_NAME
           echo ${{ env.RELEASE_TAG }}
           echo ${{ env.ENV_NAME }}
 
