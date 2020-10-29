@@ -22,12 +22,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - name: setup env
-        env:
-          RELEASE_TAG: latest
-          ENV_NAME: dev
         run: |
-          echo $RELEASE_TAG
-          echo $ENV_NAME
+          echo "::set-env name=RELEASE_TAG::latest"
+          echo "::set-env name=ENV_NAME::dev"
+          echo ${{ env.RELEASE_TAG }}
+          echo ${{ env.ENV_NAME }}
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
