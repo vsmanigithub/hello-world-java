@@ -33,4 +33,4 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo 'second time ${{ env.RELEASE_TAG }} '
-          echo 'second time ${{ en.ENV_NAME }} '
+          echo 'second time ${{ env.ENV_NAME }} '
