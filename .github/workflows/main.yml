@@ -34,4 +34,4 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo "second time $RELEASE_TAG"
-          echo "second time "$ENV_NAME"
+          echo "second time $ENV_NAME"
