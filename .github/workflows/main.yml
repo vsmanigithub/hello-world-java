@@ -33,3 +33,8 @@ jobs:
         run:  |
           echo 'second time ${{ env.RELEASE_TAG }}'
           echo 'second time ${{ env.ENV_NAME }}'
+          
+      - name: Run simple env reading
+        run:  |
+          echo second time $RELEASE_TAG
+          echo second time $ENV_NAME
